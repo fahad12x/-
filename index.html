@@ -20,7 +20,7 @@
       </div>
 
       <div class="col-md-6 login-half d-flex align-items-center justify-content-center">
-        <div class="login-form">
+        <div class="login-form w-75">
           <h2 class="text-center mb-3">تسجيل الدخول</h2>
           <h5 class="text-center text-muted mb-4">بوابة خدمات الهيئة السعودية للبحر الأحمر</h5>
 
@@ -33,11 +33,13 @@
           <div class="mb-3">
             <label for="idNumber" class="form-label">رقم هوية المالك / المفوض</label>
             <input type="text" class="form-control" id="idNumber" placeholder="أدخل رقم الهوية">
+            <div class="text-danger small mt-1" id="idError" style="display:none;"></div>
           </div>
 
           <div class="mb-3">
             <label for="password" class="form-label">كلمة المرور</label>
             <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور">
+            <div class="text-danger small mt-1" id="passError" style="display:none;"></div>
           </div>
 
           <button class="btn btn-primary w-100" id="loginBtn">تسجيل الدخول</button>
@@ -47,8 +49,40 @@
   </div>
 
   <script>
-    document.getElementById('loginBtn').addEventListener('click', function() {
-      window.location.href = 'marine.html';
+    document.getElementById('loginBtn').addEventListener('click', function () {
+      const idNumber = document.getElementById('idNumber').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const idError = document.getElementById('idError');
+      const passError = document.getElementById('passError');
+
+      // Reset errors
+      idError.style.display = 'none';
+      passError.style.display = 'none';
+
+      let isValid = true;
+
+      // Check ID Number
+      if (!/^\d{10}$/.test(idNumber)) {
+        idError.innerText = "رقم الهوية يجب أن يكون 10 أرقام فقط.";
+        idError.style.display = 'block';
+        isValid = false;
+      }
+
+      // Check Password
+      const isLongEnough = password.length >= 8;
+      const hasLetter = /[A-Za-z]/.test(password);
+      const hasNumber = /\d/.test(password);
+      const hasSymbol = /[^A-Za-z0-9]/.test(password);
+
+      if (!(isLongEnough && hasLetter && hasNumber && hasSymbol)) {
+        passError.innerText = "كلمة المرور يجب أن تحتوي على 8 أحرف على الأقل، ورقم، وحرف، ورمز.";
+        passError.style.display = 'block';
+        isValid = false;
+      }
+
+      if (isValid) {
+        window.location.href = 'marine.html';
+      }
     });
   </script>
 </body>
