@@ -1,0 +1,36 @@
+
+body {
+  font-family: 'Tahoma';
+}
+.login-half {
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+.login-form {
+  background-color: transparent;
+  padding: 40px;
+  width: 100%;
+  max-width: 400px;
+}
+.sidebar {
+  min-height: 100vh;
+  border-left: 1px solid #ddd;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sidebar .nav-item + .nav-item {
+  margin-top: 10px;
+}
+.sidebar-bottom {
+  margin-top: 20px;
+}
+#agentServices button {
+  margin-top: 10px;
+}
+.hr-title hr {
+  height: 2px;
+  background-color: #ddd;
+  border: none;
+}

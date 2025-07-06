@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول - الهيئة السعودية للبحر الأحمر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 p-0">
+        <div style="height: 100vh; overflow: hidden;">
+          <img src="https://images.pexels.com/photos/30859367/pexels-photo-30859367.jpeg"
+               class="w-100 h-100"
+               style="object-fit: cover; object-position: center;"
+               alt="صورة بحر">
+        </div>
+      </div>
+
+      <div class="col-md-6 login-half d-flex align-items-center justify-content-center">
+        <div class="login-form">
+          <h2 class="text-center mb-3">تسجيل الدخول</h2>
+          <h5 class="text-center text-muted mb-4">بوابة خدمات الهيئة السعودية للبحر الأحمر</h5>
+
+          <div class="btn-group w-100 mb-3" role="group">
+            <button type="button" class="btn btn-outline-primary">أفراد</button>
+            <button type="button" class="btn btn-outline-primary">أعمال</button>
+            <button type="button" class="btn btn-outline-primary">حكومة</button>
+          </div>
+
+          <div class="mb-3">
+            <label for="idNumber" class="form-label">رقم هوية المالك / المفوض</label>
+            <input type="text" class="form-control" id="idNumber" placeholder="أدخل رقم الهوية">
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">كلمة المرور</label>
+            <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور">
+          </div>
+
+          <button class="btn btn-primary w-100" id="loginBtn">تسجيل الدخول</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', function() {
+      window.location.href = 'marine.html';
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>الوسائط البحرية</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.rtl.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-3">
+    <div class="container-fluid justify-content-between">
+      <div class="d-flex align-items-center w-auto">
+        <span class="navbar-brand mb-0 me-3">شركة الابداع الرئيسة للخدمات البحرية</span>
+        <input class="form-control" style="width: 500px;" type="search" placeholder="ابدأ بحثك هنا" aria-label="Search">
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-bell me-2"></i>
+        <span class="navbar-text">المنصة الموحدة للسياحة الساحلية</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2 sidebar">
+        <ul class="nav flex-column nav-pills mb-4">
+          <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">قائمة المنشآت</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">التراخيص</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">الوسائط البحرية</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">فواتير</a></li>
+        </ul>
+        <div class="sidebar-bottom text-center">
+          <button class="btn btn-success w-100 mb-2" id="showAgentServices">خدمات الوكيل الملاحي</button>
+          <div class="d-none" id="agentServices">
+            <button class="btn btn-outline-primary w-100">التصاريحات التفويض</button>
+            <button class="btn btn-outline-primary w-100">خدمات الوسائط البحرية المفوض عليها</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-10">
+        <div class="hr-title d-flex align-items-center justify-content-between mt-5 mb-5">
+          <span class="px-3 fw-bold">الوسائط البحرية</span>
+          <hr class="flex-grow-1 mx-3">
+          <button class="btn btn-primary px-3">إضافة واسطة بحرية جديدة</button>
+        </div>
+
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-truck-front fs-1 mb-3 text-primary"></i>
+                  <h5 class="card-title">سفينة الركاب</h5>
+                  <p class="card-text">وصف مختصر لسفينة الركاب.</p>
+                  <a href="#" class="btn btn-primary w-100">عرض</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-compass fs-1 mb-3 text-success"></i>
+                  <h5 class="card-title">قارب النزهة</h5>
+                  <p class="card-text">وصف مختصر لقارب النزهة.</p>
+                  <a href="#" class="btn btn-primary w-100">عرض</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-life-preserver fs-1 mb-3 text-danger"></i>
+                  <h5 class="card-title">قارب الإنقاذ</h5>
+                  <p class="card-text">وصف مختصر لقارب الإنقاذ.</p>
+                  <a href="#" class="btn btn-primary w-100">عرض</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-water fs-1 mb-3 text-info"></i>
+                  <h5 class="card-title">يخت خاص</h5>
+                  <p class="card-text">وصف مختصر ليخت خاص.</p>
+                  <a href="#" class="btn btn-primary w-100">عرض</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-geo-alt fs-1 mb-3 text-warning"></i>
+                  <h5 class="card-title">زورق المراقبة</h5>
+                  <p class="card-text">وصف مختصر لزورق المراقبة.</p>
+                  <a href="#" class="btn btn-primary w-100">عرض</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <div class="card h-100 text-center">
+                <div class="card-body">
+                  <i class="bi bi-globe fs-1 mb-3 text-secondary"></i>
+                  <h5 class="card-title">وحدة بحرية دولية</h5>
+                  <p class="card-text">وصف مختصر لوحدة بحرية دولية.</p>
+                  <a href="#" class="btn btn-primary w-100">عرض</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('showAgentServices').addEventListener('click', function () {
+      document.getElementById('agentServices').classList.toggle('d-none');
+    });
+  </script>
+</body>
+</html>
