@@ -30,26 +30,30 @@
             <button type="button" class="btn btn-outline-primary">حكومة</button>
           </div>
 
-          <div class="mb-3">
-            <label for="idNumber" class="form-label">رقم هوية المالك / المفوض</label>
-            <input type="text" class="form-control" id="idNumber" placeholder="أدخل رقم الهوية">
-            <div class="text-danger small mt-1" id="idError" style="display:none;"></div>
-          </div>
+          <form id="loginForm" novalidate>
+            <div class="mb-3">
+              <label for="idNumber" class="form-label">رقم هوية المالك / المفوض</label>
+              <input type="text" class="form-control" id="idNumber" placeholder="أدخل رقم الهوية">
+              <div class="text-danger small mt-1" id="idError" style="display:none;"></div>
+            </div>
 
-          <div class="mb-3">
-            <label for="password" class="form-label">كلمة المرور</label>
-            <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور">
-            <div class="text-danger small mt-1" id="passError" style="display:none;"></div>
-          </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">كلمة المرور</label>
+              <input type="password" class="form-control" id="password" placeholder="أدخل كلمة المرور">
+              <div class="text-danger small mt-1" id="passError" style="display:none;"></div>
+            </div>
 
-          <button class="btn btn-primary w-100" id="loginBtn">تسجيل الدخول</button>
+            <button type="submit" class="btn btn-primary w-100">تسجيل الدخول</button>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-    document.getElementById('loginBtn').addEventListener('click', function () {
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
       const idNumber = document.getElementById('idNumber').value.trim();
       const password = document.getElementById('password').value.trim();
       const idError = document.getElementById('idError');
